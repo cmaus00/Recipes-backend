@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="recipe.model.RepositoryInterface">
+    <select id="getAllRecipes" resultType="Recipe">
+        SELECT
+        Id, Name, Description
+        FROM
+        recipe
+    </select>
+
+    <select id="getById" resultType="Recipe" parameterType="Integer">
+        select
+        Id, Name, Description
+        FROM
+        recipe
+        WHERE
+        Id = #{Id}
+    </select>
+</mapper>
