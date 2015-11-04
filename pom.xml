@@ -50,6 +50,21 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jsondoc</groupId>
+            <artifactId>jsondoc-core</artifactId>
+            <version>1.2.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jsondoc</groupId>
+            <artifactId>spring-boot-starter-jsondoc</artifactId>
+            <version>1.2.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jsondoc</groupId>
+            <artifactId>jsondoc-ui-webjar</artifactId>
+            <version>1.2.9</version>
+        </dependency>
     </dependencies>
 
     <properties>
@@ -68,6 +83,13 @@
 
     <repositories>
         <repository>
+            <id>forcerock</id>
+            <url>http://maven.forgerock.org/repo/repo</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
             <id>spring-milestones</id>
             <name>Spring Milestones</name>
             <url>http://repo.spring.io/milestone</url>
@@ -79,8 +101,12 @@
         <repository>
             <id>spring-releases</id>
             <url>https://repo.spring.io/libs-release</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
     </repositories>
+
     <pluginRepositories>
         <pluginRepository>
             <id>spring-releases</id>
